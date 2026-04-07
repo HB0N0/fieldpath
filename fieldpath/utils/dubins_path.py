@@ -1,6 +1,6 @@
 from shapely import LineString
 from . import geom
-from fieldpath.lib import dubins
+from fieldpath.dep import dubins
 import numpy as np
 
 class DubinsPath:

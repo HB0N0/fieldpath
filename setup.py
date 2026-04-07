@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fieldpath',
-    version='0.2.1',    
+    version='0.2.2',    
     description='Generate vector coverage paths for agricultural fields',
     url='https://github.com/HB0N0/FieldPath',
     author='Hannes Bosch',
