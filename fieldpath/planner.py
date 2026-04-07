@@ -1,13 +1,17 @@
 from __future__ import annotations
+
 from typing import Tuple
-from shapely import Polygon, LineString, MultiLineString, Point, MultiPoint, MultiPolygon
-from shapely.affinity import rotate
-from shapely.ops import nearest_points, substring, split
+
 import numpy as np
+from shapely import (LineString, MultiLineString, MultiPoint, MultiPolygon,
+                     Point, Polygon)
+from shapely.affinity import rotate
+from shapely.ops import nearest_points, split, substring
+
+from .traversal import FieldTraversal
+from .utils import geom
 from .utils.convex_decomp import convex_decomp_sweep_line
 from .utils.dubins_path import DubinsPath
-from .utils import geom
-from .traversal import FieldTraversal
 
 
 class FieldPathPlanner:

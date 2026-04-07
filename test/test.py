@@ -16,7 +16,7 @@ NUM_CONTOUR_LINES = 2
 CONTOUR_ORDER = 'last'  # 'first'  # 'last'  # 'auto'  #
 ENABLE_POLYGON_DECOMPOSITION = True
 
-WINDOW_PER_PLOT = True
+WINDOW_PER_PLOT = False
 
 start_pose = (0, 0, 0)
 end_pose = (0, 0, 0)
