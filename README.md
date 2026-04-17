@@ -1,16 +1,19 @@
-# fieldpath
+![FieldPath Logo](./docs/_static/logo_fieldpath.png)
+
+[![Language Python](https://img.shields.io/badge/language-Python-blue.svg)](https://www.python.org/)
+[![GitHub License](https://img.shields.io/github/license/HB0N0/fieldpath)](./LICENSE)
 
 A Python package for generating optimized coverage paths for agricultural fields and other polygonal areas. Built on top of [Shapely](https://shapely.readthedocs.io/).
 
 ![demo_image](./docs/_static/demo.png)
 
 ## Features
-- **Any Field Geometry** - Works with Shapely Polygon Objects that may have holes. Shapely Polygons are vector based and can be easily created from any vector file format.
+- **Robust to Complex Field Shapes** - Works with Shapely Polygon Objects that may have holes. Shapely Polygons are vector based and can be easily created from any vector file format.
 - **A-B Line Generation** – Parallel swath patterns at any angle
 - **Contour Path Generation** – Follow field boundaries with configurable insets
 - **Polygon Decomposition** – Trapezoidal decomposition for complex/concave fields - For more efficient paths concave field geometries can be processed as multiple concave objects.
 - **Path Optimization** – Greedy nearest-neighbor sequencing to minimize traversal distance
-- **Obstacle Avoidance** – Support for fields with holes (e.g., ponds, trees)
+- **Obstacle Avoidance** – Support for field shapes that have holes (e.g., trees)
 - **Traversal Planning** – Automatic path connections that stay within field boundaries
 - **Respects Vehicle capabilities** - Uses Dubins-Algorithm to generate curved traversal paths, according to the vehicles minimum turn radius. Also sharp corners in the working paths can be replaced with either Dubins Paths or filleted by the turn radius
 - **Visualization** – Built-in plotting with animated path preview
@@ -28,7 +31,7 @@ Or clone the repo and install manually
     pip install .
 ```
 
-# Example
+## Basic Example
 Basic path planning on a shapely polygon
 
 ```python
@@ -54,3 +57,21 @@ full_path, line_types = fp.generate_work_sequence(working_path,
 # full_path is a LineString with the complete path including transitions
 # line_types is a list of strings indicating the type of each segment in full_path ('traversal', 'operation')
 ```
+
+## Check out the Documentation
+
+- [Getting Started](./docs/Basics.md)
+- [Advanced Features](./docs/Advanced.md)
+
+## References
+- [Fields2Cover](https://github.com/Fields2Cover/Fields2Cover)
+- [RRT-Dubins by Félicien Cantalloube](https://github.com/FelicienC/RRT-Dubins)
+
+## AI Usage Disclosure
+AI was used for tasks like debugging and generating some of the geometric calculation alogrithms and test code snippets. 
+
+All AI-generated code was reviewed and tested by hand.
+
+## Author
+**Hannes Bosch**, 2026  
+This piece of Software is Part of my Masters Thesis at the University of Hohenheim.
