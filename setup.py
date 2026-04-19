@@ -7,7 +7,7 @@ setup(
     url='https://github.com/HB0N0/FieldPath',
     author='Hannes Bosch',
     author_email='hbono@gmx.de',
-    license='BSD 2-clause',
+    license='BSD 3-Clause',
     packages=find_packages(),
     python_requires='>=3.9',
     install_requires=['shapely>=2.0',
