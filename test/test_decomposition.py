@@ -1,12 +1,13 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+from typing import List
 import matplotlib.pyplot as plt
 from shapely import Polygon
 from shapely.plotting import plot_polygon
 from fieldpath.utils.convex_decomp import convex_decomp_sweep_line
 
-def plot_decomposition(original: Polygon, sub_polygons: list[Polygon], title: str):
+def plot_decomposition(original: Polygon, sub_polygons: List[Polygon], title: str):
     """Visualize the decomposition result."""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
     

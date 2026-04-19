@@ -1,10 +1,11 @@
 
+from typing import List
 from shapely import Polygon, MultiPolygon, LineString
 from shapely.affinity import rotate
 from shapely.ops import split
 
 
-def convex_decomp_sweep_line(polygon, sweep_angle: float = 0.0, min_width: float = 0.0) -> list[Polygon]:
+def convex_decomp_sweep_line(polygon, sweep_angle: float = 0.0, min_width: float = 0.0) -> List[Polygon]:
     """
     Trapezoidal decomposition (sweep line method).
     
