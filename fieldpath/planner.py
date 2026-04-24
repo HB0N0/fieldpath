@@ -133,7 +133,7 @@ class FieldPathPlanner:
             lines = self.generate_A_B_line(inner_field, angle)
 
             all_lines.extend(lines.geoms)
-            return MultiLineString(all_lines), None
+            return MultiLineString(all_lines), []
         else:
             # Decompose inner field into convex sub-polygons
             # We set the sweep line angle 90 degress to the field orientation, to preserve the long parts first
